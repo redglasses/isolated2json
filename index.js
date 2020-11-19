@@ -18,13 +18,12 @@ module.exports = async function(url) {
 					break;
 				}
 				let caseNo = parseInt(line1[0].split(' ')[0]);
-				output.push({
-				  case_no:caseNo,
-				  district:line1[0].substring(caseNo.toString().length).trim(),
-				  address:line1[1].trim(),
-				  end_date:lines[i+2],
-				});
-			}
+				output.push(`{
+          "case_no":"${caseNo}",
+          "district":"${line1[0].substring(caseNo.toString().length).trim()}",
+          "address":"${line1[1].trim()}",
+          "end_date":"${lines[i+2]}"
+        }`);
 		}
 
 		return output;
