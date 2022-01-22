@@ -10,7 +10,7 @@
   "url": "https://github.com/redglasses/isolated2json",
   "license": "ISC",
   "dependencies": {
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "pdf-parse": "^1.1.1"
   },
   "bin":"cli.js"
